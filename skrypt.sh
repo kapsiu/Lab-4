@@ -30,6 +30,8 @@ help()
   echo "--date | -d"
   echo "--logs | -l"
   echo "--help | -h"
+  echo "--init | -i"
+  echo "--error | -e"
 }
 
 init()
