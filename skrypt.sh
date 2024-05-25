@@ -11,6 +11,14 @@ logs()
   done
 }
 
+help()
+{
+  echo "Available options:"
+  echo "--date"
+  echo "--logs"
+  echo "--help"
+}
+
 case "$1" in
   --date)
       date ;;
@@ -21,4 +29,6 @@ case "$1" in
       else
         logs 100
       fi ;;
+  --help)
+    help ;;
 esac
