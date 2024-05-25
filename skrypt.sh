@@ -11,6 +11,19 @@ logs()
   done
 }
 
+error()
+{
+  num_files=$1
+  for ((i=1; i<=num_files; i++)); do
+    dirname="error$i"
+    mkdir $dirname
+    filename="$dirname.txt"
+    echo "File name: $filename" >> $dirname/$filename
+    echo "Created by script: $0" >> $dirname/$filename
+    echo "Date: $(date)" >> $dirname/$filename
+  done
+}
+
 help()
 {
   echo "Available options:"
@@ -40,4 +53,11 @@ case "$1" in
       help ;;
   --init)
       init ;;
+  --error | -e)
+    if [ -n "$2" ]
+    then
+      error $2
+    else
+      error 100
+    fi ;;
 esac
