@@ -20,15 +20,15 @@ help()
 }
 
 case "$1" in
-  --date)
+  --date | -d)
       date ;;
-  --logs)
+  --logs | -l)
       if [ -n "$2" ]
       then
         logs $2
       else
         logs 100
       fi ;;
-  --help)
+  --help | -h)
     help ;;
 esac
