@@ -14,9 +14,9 @@ logs()
 help()
 {
   echo "Available options:"
-  echo "--date"
-  echo "--logs"
-  echo "--help"
+  echo "--date | -d"
+  echo "--logs | -l"
+  echo "--help | -h"
 }
 
 case "$1" in
