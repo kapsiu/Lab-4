@@ -19,6 +19,13 @@ help()
   echo "--help"
 }
 
+init()
+{
+  repo="https://github.com/kapsiu/Lab-4"
+  git clone $repo
+  export PATH=$PATH:$(pwd)
+}
+
 case "$1" in
   --date | -d)
       date ;;
@@ -30,5 +37,7 @@ case "$1" in
         logs 100
       fi ;;
   --help | -h)
-    help ;;
+      help ;;
+  --init)
+      init ;;
 esac
